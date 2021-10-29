@@ -1,6 +1,6 @@
 class Board:
     x, y = 0
-    f = "SW"
+    f = "N"
 
     def place(self, x, y, f):
         if f != "NORTH" or f != "EAST" or f != "WEST" or f != "SOUTH":
