@@ -2,7 +2,7 @@ class Board:
     x, y = 0
     f = "N"
 
-    def place(self, x, y, f):
+    def place(x, y, f):
         if f != "NORTH" or f != "EAST" or f != "WEST" or f != "SOUTH":
             return "invalid side"
         Board.x = x
@@ -16,7 +16,7 @@ class Board:
         if f == "SOUTH":
             Board.f = 'S'
 
-    def left(self):
+    def left():
         if Board.f == 'N':
             Board.f = 'W'
         elif Board.f == 'W':
@@ -28,7 +28,7 @@ class Board:
         else:
             return "something wrong"
 
-    def right(self):
+    def right():
         if Board.f == 'N':
             Board.f = 'E'
         elif Board.f == 'E':
@@ -40,7 +40,7 @@ class Board:
         else:
             return "something2 wrong"
 
-    def move(self):
+    def move():
         if Board.f == 'N' and Board.y < 5:
             Board.y += 1
         elif Board.f == 'N' and Board.y == 5:
@@ -58,7 +58,7 @@ class Board:
         elif Board.f == 'W' and Board.x == 0:
             return "FALLING WEST-IGNORING MOVEMENT"
 
-    def report(self):
+    def report():
         if Board.f == 'N':
             print(f'{Board.x},{Board.y},NORTH')
         if Board.f == 'E':
