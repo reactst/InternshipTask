@@ -36,3 +36,5 @@ while True:
 
     if novistr.find("REPORT")!=-1:
         b.report()
+
+print ("job done")
