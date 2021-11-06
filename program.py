@@ -1,14 +1,3 @@
-def setf (f):
-    if f.find('EAST')!= -1:
-        return 'EAST'
-    elif f.find('WEST')!= -1:
-        return 'WEST'
-    elif f.find('NORTH')!= -1:
-        return 'NORTH'
-    elif f.find('SOUTH')!= -1:
-        return 'SOUTH'
-    else:
-        return 'NEVALJA'
 def move(x,y,f):
     if f == 'NORTH' and y < 5:
         y+=1
