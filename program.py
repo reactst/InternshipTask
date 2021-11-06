@@ -50,23 +50,19 @@ while True:
     if in_put.find('exit') != -1:
         print('EXITING')
         break
-    lastPLACE = in_put.rfind('PLACE')
-    firstPOS = in_put[lastPLACE + 6 : lastPLACE + 9]
-    values = firstPOS.split(',')
-    x = int(values[0])
-    y = int(values[1])
-    f = in_put[in_put.rfind('PLACE')+10:in_put.rfind('PLACE')+15]
-    rest = in_put[in_put.rfind('PLACE')+15:]
-    rest = rest.split(' ')
-    for i in rest:
-        f = setf(f)
-        if i == 'MOVE':
+    input_list = in_put.split(' ')
+    for i, v in enumerate(input_list):
+        if v == 'PLACE':
+            x = int(input_list[i+1].split(',')[0])
+            y = int(input_list[i+1].split(',')[1])
+            f = input_list[i+1].split(',')[2]
+        if v == 'MOVE':
             x,y= move(x,y,f)
-        if i == 'LEFT':
+        if v == 'LEFT':
             f = left(f)
-        if i == 'RIGHT':
+        if v == 'RIGHT':
             f = right(f)
-        if i == 'REPORT':
+        if v == 'REPORT':
             report(x,y,f)
 
 
