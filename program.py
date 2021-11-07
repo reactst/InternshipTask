@@ -18,7 +18,7 @@ left = {
 
 right = {
     'NORTH': 'EAST',
-    'WEST': 'SOUTH',
+    'EAST': 'SOUTH',
     'SOUTH': 'WEST',
     'WEST': 'NORTH'
 }
