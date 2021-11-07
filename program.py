@@ -33,6 +33,9 @@ while True:
         if v == 'PLACE':
             x = int(input_list[i+1].split(',')[0])
             y = int(input_list[i+1].split(',')[1])
+            if x < 0 or y < 0 or x > 5 or y >5:
+                print (f'Invalid coordinates: {x}{y}')
+                continue
             f = input_list[i+1].split(',')[2]
         if v == 'MOVE':
             x, y = move(x, y, f)
