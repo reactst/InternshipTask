@@ -9,11 +9,6 @@ def move(x, y, f):
         x -= 1
     return x, y
 
-
-def report(x, y, f):
-    print(f'{x},{y},{f}')
-
-
 left = {
     'NORTH': 'WEST',
     'WEST': 'SOUTH',
@@ -46,4 +41,4 @@ while True:
         if v == 'RIGHT':
             f = right[f]
         if v == 'REPORT':
-            report(x, y, f)
+            print(f'{x},{y},{f}')
