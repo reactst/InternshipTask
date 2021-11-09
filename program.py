@@ -29,14 +29,11 @@ while True:
         print('EXITING')
         break
     input_list = in_put.split(' ')
-    for i, v in enumerate(input_list):
-        if v == 'PLACE':
-            x = int(input_list[i+1].split(',')[0])
-            y = int(input_list[i+1].split(',')[1])
-            if x < 0 or y < 0 or x > 5 or y >5:
-                print (f'Invalid coordinates: {x}{y}')
-                continue
-            f = input_list[i+1].split(',')[2]
+    shortened_list = input_list[(next(i for i in reversed(range(len(input_list))) if input_list[i] == 'PLACE')):]
+    x = int(shortened_list[1].split(',')[0])
+    y = int(shortened_list[1].split(',')[1])
+    f = shortened_list[1].split(',')[2]
+    for i, v in enumerate(shortened_list):
         if v == 'MOVE':
             x, y = move(x, y, f)
         if v == 'LEFT':
