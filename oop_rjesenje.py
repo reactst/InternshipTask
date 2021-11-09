@@ -17,13 +17,6 @@ class Table:
         'WEST': 'NORTH'
         }
 
-
-    def left (self):
-        self.f = self.leftr[self.f]
-    
-    def right (self):
-        self.f = self.rightr[self.f]
-    
     def move(self):
         if self.f == 'NORTH' and self.y < 5:
             self.y += 1
@@ -33,6 +26,13 @@ class Table:
             self.x += 1
         elif self.f == 'WEST' and self.x > 0:
             self.x -= 1
+
+    def left (self):
+        self.f = self.leftr[self.f]
+    
+    def right (self):
+        self.f = self.rightr[self.f]
+    
     
     def report (self):
         print(f'{self.x},{self.y},{self.f}')
