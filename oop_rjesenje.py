@@ -52,3 +52,5 @@ while True:
             t.right()
         elif v == 'REPORT':
             t.report()
+        else:
+            print (f'Unknown keyword: {v}')

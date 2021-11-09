@@ -1,11 +1,11 @@
 def move(x, y, f):
     if f == 'NORTH' and y < 5:
         y += 1
-    if f == 'SOUTH' and y > 0:
+    elif f == 'SOUTH' and y > 0:
         y -= 1
-    if f == 'EAST' and x < 5:
+    elif f == 'EAST' and x < 5:
         x += 1
-    if f == 'WEST' and x > 0:
+    elif f == 'WEST' and x > 0:
         x -= 1
     return x, y
 
@@ -36,9 +36,11 @@ while True:
     for i, v in enumerate(shortened_list):
         if v == 'MOVE':
             x, y = move(x, y, f)
-        if v == 'LEFT':
+        elif v == 'LEFT':
             f = left[f]
-        if v == 'RIGHT':
+        elif v == 'RIGHT':
             f = right[f]
-        if v == 'REPORT':
+        elif v == 'REPORT':
             print(f'{x},{y},{f}')
+        else:
+            print (f'Unknown keyword: {v}')
