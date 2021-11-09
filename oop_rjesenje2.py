@@ -40,13 +40,13 @@ class Table:
     def process (self,orders):
         for v in orders:
             if v == 'MOVE':
-                t.move()
+                self.move()
             elif v == 'LEFT':
-                t.left()
+                self.left()
             elif v == 'RIGHT':
-                t.right()
+                self.right()
             elif v == 'REPORT':
-                t.report()
+                self.report()
 
 
 while True:
