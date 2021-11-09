@@ -42,5 +42,3 @@ while True:
             f = right[f]
         elif v == 'REPORT':
             print(f'{x},{y},{f}')
-        else:
-            print (f'Unknown keyword: {v}')

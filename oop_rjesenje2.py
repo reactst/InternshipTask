@@ -37,18 +37,22 @@ class Table:
     def report (self):
         print(f'{self.x},{self.y},{self.f}')
 
+    def process (self,orders):
+        for v in orders:
+            if v == 'MOVE':
+                t.move()
+            elif v == 'LEFT':
+                t.left()
+            elif v == 'RIGHT':
+                t.right()
+            elif v == 'REPORT':
+                t.report()
+
+
 while True:
     in_put = input('')
     input_list = in_put.split(' ')
     shortened_list = input_list[(next(i for i in reversed(range(len(input_list))) if input_list[i] == 'PLACE')):]
     koordinate = shortened_list[1].split(',')
     t = Table(koordinate[0],koordinate[1],koordinate[2])
-    for i, v in enumerate(shortened_list):
-        if v == 'MOVE':
-            t.move()
-        elif v == 'LEFT':
-            t.left()
-        elif v == 'RIGHT':
-            t.right()
-        elif v == 'REPORT':
-            t.report()
+    t.process(shortened_list)
