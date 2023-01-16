@@ -1,5 +1,4 @@
-# Seek and Hit task
-Create a **private** GitHub repository for the task and add the user noted in the task email as a collaborator.
+# Internship task
 
 Push the initial commit without your changes.
 
